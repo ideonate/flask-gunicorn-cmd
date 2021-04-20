@@ -81,7 +81,7 @@ def make_app(command, server_name=None, debug=False):
 @click.option('--ip', default=None, help='Address to listen on')
 @click.option('--server-name', default=None, type=click.STRING, 
                 help='Name of the flask app inside your script (default None means search for a suitable Flask var)')
-@click.option('--workers', default=4, type=int, help='Number of workers')
+@click.option('--workers', default=2, type=click.INT, help='Number of workers')
 @click.option('--debug/--no-debug', default=False, help='To display debug level logs')
 @click.argument('command', nargs=1, required=True)
 def run(port, ip, server_name, workers, debug, command):
